@@ -2,6 +2,9 @@
 
 set -e
 
+# Write chap-secrets from environment variables
+echo "$CHAPSECRETS" > /etc/ppp/chap-secrets
+
 # enable IP forwarding
 sysctl -w net.ipv4.ip_forward=1
 
